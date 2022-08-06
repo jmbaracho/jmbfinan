@@ -1,0 +1,31 @@
+{
+  "applications": ["JMBFinan"],
+  "changelogDate": "20220806011133",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "conta",
+  "fields": [
+    {
+      "fieldName": "dsConta",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vlSaldo",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Conta",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "lancamento",
+      "otherEntityRelationshipName": "conta",
+      "relationshipName": "lancamento",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

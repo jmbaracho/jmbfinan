@@ -1,0 +1,9 @@
+{
+  "jmbFinanApp": {
+    "TipoLancamento": {
+      "null": "",
+      "RECEITA": "RECEITA",
+      "DESPESA": "DESPESA"
+    }
+  }
+}

@@ -17,7 +17,7 @@ logging:
   level:
     ROOT: INFO
     tech.jhipster: INFO
-    br.com.jmbfinan: INFO
+    br.com.jmb.finan: INFO
 
 management:
   metrics:
