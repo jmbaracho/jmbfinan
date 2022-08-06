@@ -2,16 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
+import { LANGUAGES } from 'app/config/language.constants';
 import { User } from '../user-management.model';
 import { UserManagementService } from '../service/user-management.service';
 
-const initialUser: User = {};
+const initialUser: User = {
+  langKey: 'en',
+};
 
 @Component({
   selector: 'jhi-user-mgmt-update',
   templateUrl: './user-management-update.component.html',
 })
 export class UserManagementUpdateComponent implements OnInit {
+  languages = LANGUAGES;
   authorities: string[] = [];
   isSaving = false;
 
@@ -33,6 +37,7 @@ export class UserManagementUpdateComponent implements OnInit {
       validators: [Validators.minLength(5), Validators.maxLength(254), Validators.email],
     }),
     activated: new FormControl(initialUser.activated, { nonNullable: true }),
+    langKey: new FormControl(initialUser.langKey, { nonNullable: true }),
     authorities: new FormControl(initialUser.authorities, { nonNullable: true }),
   });
 

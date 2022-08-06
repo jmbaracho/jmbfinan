@@ -1,0 +1,27 @@
+{
+  "applications": ["JMBFinan"],
+  "changelogDate": "20220806011134",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "categoria",
+  "fields": [
+    {
+      "fieldName": "dsCategoria",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Categoria",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "lancamento",
+      "otherEntityRelationshipName": "categoria",
+      "relationshipName": "lancamento",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

@@ -1,0 +1,48 @@
+{
+  "applications": ["JMBFinan"],
+  "changelogDate": "20220806011135",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "lancamento",
+  "fields": [
+    {
+      "fieldName": "dsObservacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vlLancamento",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "dtLancamento",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "tpLancamento",
+      "fieldType": "TipoLancamento",
+      "fieldValues": "RECEITA,DESPESA"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Lancamento",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "dsConta",
+      "otherEntityName": "conta",
+      "otherEntityRelationshipName": "lancamento",
+      "relationshipName": "conta",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "dsCategoria",
+      "otherEntityName": "categoria",
+      "otherEntityRelationshipName": "lancamento",
+      "relationshipName": "categoria",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

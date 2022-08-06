@@ -1,0 +1,40 @@
+
+application {
+  config {
+    baseName JMBFinan,
+    applicationType monolith,
+    packageName br.com.jmb.finan,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    clientFramework angular
+  }
+  entities *
+}
+
+entity Conta {
+    dsConta String
+    vlSaldo BigDecimal
+}
+
+entity Categoria {
+	dsCategoria String
+}
+
+entity Lancamento {
+	dsObservacao String
+	vlLancamento BigDecimal
+	dtLancamento LocalDate
+	tpLancamento TipoLancamento
+}
+
+enum TipoLancamento {
+	RECEITA, DESPESA
+}
+
+relationship OneToMany {
+  Conta to Lancamento{conta(dsConta)}
+  Categoria to Lancamento{categoria(dsCategoria)}
+}
+
+
+    
